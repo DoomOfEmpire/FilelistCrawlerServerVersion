@@ -172,7 +172,7 @@ public class RunThread extends Thread implements Runnable
 					saveman.setKey("fl", fl+"");
 					saveman.setKey("usernamepassword", "false");
 					
-					Logger.log("Got cookies from Filelist.ro. Will use those instead next time.");
+					Logger.log("Got cookies from filelist.io. Will use those instead next time.");
 					
 	//				Utils.saveData(mainInstance, saveman);
 					
@@ -341,7 +341,7 @@ public class RunThread extends Thread implements Runnable
 	/////////////////////////////////////
 	public List<String> getCFDUID() throws Exception
 	{
-		String request        = "https://filelist.ro/login.php";
+		String request        = "https://filelist.io/login.php";
 		URL    url            = new URL( request );
 		HttpsURLConnection conn= (HttpsURLConnection) url.openConnection();           
 		conn.setDoOutput( true );
@@ -396,7 +396,7 @@ public class RunThread extends Thread implements Runnable
 		}
 		byte[] postData       = urlParameters.getBytes( StandardCharsets.UTF_8 );
 		int    postDataLength = postData.length;
-		String request        = "https://filelist.ro/takelogin.php";
+		String request        = "https://filelist.io/takelogin.php";
 		URL    url            = new URL( request );
 		HttpsURLConnection conn= (HttpsURLConnection) url.openConnection();    
 		conn.setDoOutput( true );
@@ -416,7 +416,7 @@ public class RunThread extends Thread implements Runnable
 	}
 	public String getBrowsePage(String cfduidtmp,String passtmp,String phpsessidtmp,String uidtmp, String fl2) throws Exception
 	{
-		String request        = "https://filelist.ro/browse.php";
+		String request        = "https://filelist.io/browse.php";
 		URL    url            = new URL( request );
 		HttpsURLConnection conn= (HttpsURLConnection) url.openConnection();    
 		conn.setDoOutput( true );
@@ -460,7 +460,7 @@ public class RunThread extends Thread implements Runnable
 	}
 	public void downloadTorrent(String cfduidtmp,String passtmp,String phpsessidtmp,String uidtmp,String downloadLink,File expectedTorrentPath) throws Exception
 	{
-		String request        = "https://filelist.ro/"+downloadLink;
+		String request        = "https://filelist.io/"+downloadLink;
 		URL    url            = new URL( request );
 		HttpsURLConnection conn= (HttpsURLConnection) url.openConnection();    
 		conn.setDoOutput( true );
