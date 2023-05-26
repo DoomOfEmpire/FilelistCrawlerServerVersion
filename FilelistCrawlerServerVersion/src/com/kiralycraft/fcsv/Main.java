@@ -173,7 +173,7 @@ public class Main
 		AvailableClients chosen = AvailableClients.values()[Integer.parseInt(clientType)-1];
 		saveman.setKey("chosenClient", chosen.toString());
 		
-		Logger.log("Doresti sa te loghezi pe Filelist.ro cu username si parola, sau cookies din browser? <U/c>");
+		Logger.log("Doresti sa te loghezi pe filelist.io cu username si parola, sau cookies din browser? <U/c>");
 		String choice = scan.nextLine();
 		boolean usernamePassowrd = true;
 		if (choice.startsWith("c"))
@@ -192,9 +192,9 @@ public class Main
 		String fl = "null";
 		if (usernamePassowrd)
 		{
-			Logger.log("Introdu username-ul cu care te loghezi pe Filelist.ro");
+			Logger.log("Introdu username-ul cu care te loghezi pe filelist.io");
 			flUsername = scan.nextLine();
-			Logger.log("Introdu parola cu care te loghezi pe Filelist.ro (nu va aparea pe ecran din motive de securitate)");
+			Logger.log("Introdu parola cu care te loghezi pe filelist.io (nu va aparea pe ecran din motive de securitate)");
 			flPassword = readPassowrd(console,scan);
 		}
 		else
