@@ -106,7 +106,7 @@ public class ThxHandler
 				String urlParameters  = "action=add&ajax=1&torrentid="+torrentID;
 				byte[] postData       = urlParameters.getBytes( StandardCharsets.UTF_8 );
 				int    postDataLength = postData.length;
-				String request        = "https://filelist.ro/thanks.php";
+				String request        = "https://filelist.io/thanks.php";
 				URL    url            = new URL( request );
 				HttpsURLConnection conn= (HttpsURLConnection) url.openConnection();    
 				conn.setDoOutput( true );
@@ -211,7 +211,7 @@ public class ThxHandler
 	// Get torrent page 
 	public String getTorrentPage(String id) throws Exception
 	{
-		String request        = "https://filelist.ro/thanks.php?action=list&ajax=1&torrentid="+id;
+		String request        = "https://filelist.io/thanks.php?action=list&ajax=1&torrentid="+id;
 		URL    url            = new URL( request );
 		HttpsURLConnection conn= (HttpsURLConnection) url.openConnection();    
 		conn.setDoOutput( true );
